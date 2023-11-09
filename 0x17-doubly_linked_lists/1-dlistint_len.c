@@ -5,14 +5,13 @@
  **/
 size_t dlistint_len(const dlistint_t *h)
 {
-	const dlistint_t *node = h;
-	size_t x = 0;
+	size_t count = 0;
 
-	while (node)
+	/* while we have a pointer to the list */
+	while (h != NULL)
 	{
-		x++;
-		node = node->next;
+		count++;
+		h = h->next;
 	}
-
-	return (x);
+	return (count);
 }
